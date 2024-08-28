@@ -39,7 +39,7 @@ const { width } = Dimensions.get('window');
     },
     imageBackground: {
       width: width - 40,
-      height: 200,
+      height: 300,
       justifyContent: 'center',
       alignItems: 'start',
     },
@@ -51,20 +51,23 @@ const { width } = Dimensions.get('window');
       color: '#fff',
       fontSize: 18,
       fontWeight: 'bold',
-      backgroundColor: 'rgba(0, 0, 0, 0.2)',
       paddingHorizontal: 10,
       paddingVertical: 5,
       borderRadius: 5,
     },
   });
   
+  const image1 = require('./assets/image1.jpg')
+  const image2 = require('./assets/image2.jpg')
+  const image3 = require('./assets/image3.jpg')
+
   return (
     <ScrollView style={{padding:12,}}>
       <Text style={{color:'black',fontWeight:'bold'}}>Start Here</Text>
 
       <View style={styles.cardContainer}>
         <ImageBackground
-          source={{ uri: 'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg' }} // replace with your image URL
+          source={image1} // replace with your image URL
           style={styles.imageBackground}
           imageStyle={styles.image}
         >
@@ -74,7 +77,7 @@ const { width } = Dimensions.get('window');
 
       <View style={styles.cardContainer}>
         <ImageBackground
-          source={{ uri: 'https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg' }} // replace with your image URL
+          source={image2} // replace with your image URL
           style={styles.imageBackground}
           imageStyle={styles.image}
         >
@@ -84,7 +87,7 @@ const { width } = Dimensions.get('window');
 
       <View style={styles.cardContainer}>
         <ImageBackground
-          source={{ uri: 'https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg' }} // replace with your image URL
+          source={image3} // replace with your image URL
           style={styles.imageBackground}
           imageStyle={styles.image}
         >
